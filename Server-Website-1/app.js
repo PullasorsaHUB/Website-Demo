@@ -44,10 +44,10 @@ document.getElementById("feedbackform").addEventListener("submit", function(even
 
     const message = document.getElementById("msg").value;
 
-    fetch("https://discord.com/api/webhooks/1338795167922262077/6e4G5oSuGZSTYKm9eYVCnF5ZNCm444OM_9UIK0qxq82kDKv1kCYzSYkFPvWmnMfKYY62", {
+    fetch("https://discord.com/api/webhooks/1345006704403677237/5xoiQRxZGAeBQFyGWPu-ytpv4LYKVOIwe1aiiJmeRfGvsRhOzO83YvQV49h-mmVKmeUh", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ content: `📩 New Feedback To Website: ${message}` })
+        body: JSON.stringify({ content: `New Feedback : Website : ${message}` })
     }).then(response => {
         if (response.ok) {
             alert("Feedback sent to Discord!");
@@ -57,3 +57,6 @@ document.getElementById("feedbackform").addEventListener("submit", function(even
         }
     }).catch(error => console.error("Error:", error));
 });
+
+
+
